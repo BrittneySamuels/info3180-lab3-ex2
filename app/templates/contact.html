@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="contact-header"><b>Contact Form<b></h1>
+<hr>
+<p class="text1">Fill in this form to contact the site owners.</p>
+<br>
+<form action="{{url_for('contact')}}" method="post">  
+	<div> 
+		<label for="name">Name</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter your full name</p>
+		<input type="text" id="name" name="full_name" size="35" required/>   
+	</div>
+	<br> 
+	<div>
+		<label for="mail">E-mail</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter your e-mail address</p>
+		<input type="email" id="mail" name="email" size="35" required/>   
+ 	</div>
+ 	<br>
+ 	<div>
+		<label for="subject">Subject</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter the subject:for your message.</p>
+		<input id="subject" name="subject" size="35" required/>
+	</div>
+	<br>
+ 	<div>
+		<label for="msg">Message</label><span>[Required]</span>
+		<br>
+		<p class="text1">Please enter the message you would like to send.</p>
+		<textarea id="msg" name="message" rows="4" cols="45" required></textarea>
+	</div>
+ 	<br>
+<button type="submit" class="submit1">Send</button> 
+</form>
+{% endblock %}
